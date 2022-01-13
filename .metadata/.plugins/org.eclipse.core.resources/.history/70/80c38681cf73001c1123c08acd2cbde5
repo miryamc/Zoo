@@ -1,0 +1,24 @@
+package Zoo;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class TestAnimal {
+
+	public static void main(String[] args) {
+		
+		List<Animal> animals = Arrays.asList(
+				new Dog(true,true, Dog.MOOD_HAPPY),
+				new Cat(true,true, Cat.MOOD_SCARE),
+				new Frog(false, false, Frog.MOOD_HAPPY)
+				);
+		
+		for(Animal a : animals){
+			a.SayHello();
+		}
+	
+	}
+
+}

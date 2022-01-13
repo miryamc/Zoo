@@ -1,0 +1,46 @@
+package Zoo;
+
+public class Cat extends Animal implements Land{
+
+	private int numbersOfLegs;
+	
+	public int getNumbersOfLegs() {
+		return numbersOfLegs;
+	}
+
+	public void setNumbersOfLegs(int numbersOfLegs) {
+		this.numbersOfLegs = numbersOfLegs;
+	}
+
+	public Cat() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Cat(boolean isMammals, boolean isCarnivorous, int mood) {
+		super(isMammals, isCarnivorous, mood);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void SayHello() {
+		this.SayHello(this.getMood());
+	}
+
+	@Override
+	public void SayHello(int mood) {
+		switch(mood) {
+		case Animal.MOOD_HAPPY: System.out.println("purr, purr"); 
+		break;
+		case Animal.MOOD_SCARE: System.out.println("hiss"); 
+		break;
+		default: System.out.println("meow");
+		}
+	}
+
+	@Override
+	public int GetNumbersOfLegs() {
+		return this.getNumbersOfLegs();
+	}
+	
+}

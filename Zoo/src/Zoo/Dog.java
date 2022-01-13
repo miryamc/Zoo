@@ -1,0 +1,39 @@
+package Zoo;
+
+public class Dog extends Animal implements Land {
+
+	public static int NumbersOfLegs = 4;
+	
+	public Dog() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Dog(boolean isMammals, boolean isCarnivorous, int mood) {
+		super(isMammals, isCarnivorous, mood);
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public int GetNumbersOfLegs() {
+		return this.NumbersOfLegs;
+	}
+
+	@Override
+	public void SayHello() {
+		this.SayHello(this.getMood());
+		
+	}
+
+	@Override
+	public void SayHello(int mood) {
+
+		switch(mood) {
+		case Animal.MOOD_HAPPY: System.out.println("bark loudly"); // When they feel comfortable being touched
+		break;
+		case Animal.MOOD_SCARE: System.out.println("whooping"); // When they are frightened and upset.
+		break;
+		default: System.out.println("wagging my tail"); // Dogs usually greet people
+		}
+		
+	}
+
+}
